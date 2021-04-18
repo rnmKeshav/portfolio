@@ -1,5 +1,5 @@
 .hero {
-  height: 90vh;
+  height: 80vh;
   width: 100vw;
   background-image: url("../images/wave1.webp");
   background-position: right;
@@ -10,7 +10,7 @@
   .background-gradiant {
     background: linear-gradient(90deg, #0b0127 0 25%, transparent);
     width: 100vw;
-    height: 90vh;
+    height: 80vh;
     position: absolute;
   }
 
@@ -53,62 +53,125 @@
     }
   }
 
-  .display-text {
-    margin: 60px;
+  .social {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    display: flex;
+    z-index: 2;
 
-    .static {
-      font-size: 20px;
-    }
+    .card {
+      @extend .center;
+      width: 80px;
+      height: 80px;
+      background-color: #140c34;
+      box-shadow: 4px 4px 8px rgba(0, 0,0, 0.25), -4px -4px 8px rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      margin: 10px;
+      font-size: 40px;
+      color: aliceblue;
+      
 
-    .dynamic {
-      ul li {
-        list-style: none;
-        font-size: 4rem;
-        color: aliceblue;
-        text-shadow: 0 0 1px aliceblue;
-        
+      i + i {
+        display: none;
+      }
 
-        .effect {
-          position: relative;
-          &::before {
-            position: absolute;
-            content: "";
-            width: 100%;
-            height: 100%;
-            background-color: rgba(22, 14, 53) ;
-            border-left: 2px solid red;
-            padding-left: 2px;
-            left: 0%;
-          }
+      &:hover {
+        i {
+          display: none;
 
-          &.name {
-            &::before {
-              animation: typing 2s steps(13) infinite;
-            }
-          }
-
-          &.designation {
-            &::before {
-              animation: typing 2.6s steps(17) infinite;
-            }
-          }
-
-          &.profile {
-            &::before {
-              animation: typing 3s steps(17) infinite;
-            }
-          }
-
-          @keyframes typing {
-            100% {
-              left: 100%;
-              width: 0%;
-              margin: 0px 34px;
-            }
+          &+i {
+            display: block;
           }
         }
 
+        &.github {
+          background-color: #333333;
+        }
+
+        &.facebook {
+          background-color: #4267B2;
+        }
+
+        &.instagram {
+          background-color: #E1306C;
+        }
+
+        &.linkedin {
+          background-color: #0077b5;
+        }
       }
+    }
+  }
+
+  .display-text {
+    margin: 0px 60px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    z-index: 1;
+    padding-top: 24px;
+
+    .static {
+      font-size: 1.3rem;
+      animation: greeting 0.25s 1;
+    }
+
+    @keyframes greeting {
+      0% {
+        font-size: 4rem;
+      }
+      100% {
+        font-size: 1.3rem;
+      }
+      
+    }
+
+
+    .dynamic {
+      font-size: 3.5rem;
+      text-shadow: 0 0 1px #DE3163;
+      color: #DE3163;
+      position: relative;
+      min-width: 500px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        // background-color: rgba(22, 14, 53) ;
+        border-left: 2px solid red;
+        padding-left: 2px;
+        animation: blink 0.25s 80;
+        opacity: 0;
+      }
+
+      @keyframes blink {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+      
+    }
+  }
+
+  .photo {
+    width: 90%;
+    height: 80%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4), -4px -4px 8px rgba($color: #231b50, $alpha: 0.25);
+
+    &:hover {
+      transform: scale(1.1);
+      transition: all 0.6s ease-in-out;
     }
   }
 
