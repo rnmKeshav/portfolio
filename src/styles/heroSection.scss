@@ -1,0 +1,115 @@
+.hero {
+  height: 90vh;
+  width: 100vw;
+  background-image: url("../images/wave1.webp");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: #231b50;
+  background-size: cover;
+
+  .background-gradiant {
+    background: linear-gradient(90deg, #0b0127 0 25%, transparent);
+    width: 100vw;
+    height: 90vh;
+    position: absolute;
+  }
+
+  .content {
+    position: relative;
+    color: white;
+    display: flex;
+    height: 100%;
+  }
+
+  .board {
+    width: 80%;
+    height: 80%;
+    background-color: rgba(22, 14, 53, 0.5);
+    box-shadow: 0px 16px 32px rgba(70, 152, 222, 0.15);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      margin: 20px;
+      background-color: #C0C0C0;
+      border-radius: 50%;
+      box-shadow: 0px 2px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 2px 4px rgb(255, 255, 255, 0.30)
+    }
+    &::after {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      content: "";
+      width: 20px;
+      height: 20px;
+      margin: 20px;
+      background-color: #C0C0C0;
+      border-radius: 50%;
+      box-shadow: 0px 2px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 2px 4px rgb(255, 255, 255, 0.30)
+    }
+  }
+
+  .display-text {
+    margin: 60px;
+
+    .static {
+      font-size: 20px;
+    }
+
+    .dynamic {
+      ul li {
+        list-style: none;
+        font-size: 4rem;
+        color: aliceblue;
+        text-shadow: 0 0 1px aliceblue;
+        
+
+        .effect {
+          position: relative;
+          &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba(22, 14, 53) ;
+            border-left: 2px solid red;
+            padding-left: 2px;
+            left: 0%;
+          }
+
+          &.name {
+            &::before {
+              animation: typing 2s steps(13) infinite;
+            }
+          }
+
+          &.designation {
+            &::before {
+              animation: typing 2.6s steps(17) infinite;
+            }
+          }
+
+          &.profile {
+            &::before {
+              animation: typing 3s steps(17) infinite;
+            }
+          }
+
+          @keyframes typing {
+            100% {
+              left: 100%;
+              width: 0%;
+              margin: 0px 34px;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+}
