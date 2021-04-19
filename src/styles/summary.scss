@@ -1,0 +1,41 @@
+.summary {
+  height: 80vh;
+  width: 100vw;
+  background-image: url("../images/section_2.jpeg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: #231b50;
+  background-size: cover;
+  box-shadow: 0px -24px 16px rgb(35 27 80 / 70%);
+
+  .background-gradiant {
+    // background: linear-gradient(180deg, #0b0127e0 0 25%, transparent);
+    background: linear-gradient(rgba(11, 1, 39, 0.88) 0px, rgba(11, 1, 39, 0.4) 50%, transparent);
+    width: 100vw;
+    height: 80vh;
+    position: absolute;
+  }
+
+  .board {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(white, 0.6);
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.2);
+    position: relative;
+    
+
+    .text {
+      position: absolute;
+      left: -40px;
+      height: 80%;
+      width: 50%;
+      border-radius: 20px;
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(5px);
+    }
+  }
+}

@@ -47,6 +47,12 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
+      <section className="summary center">
+        <div className="background-gradiant"></div>
+        <div className="board">
+          <div className="text"></div>
+        </div>
+      </section>
     </div>
   )
 }

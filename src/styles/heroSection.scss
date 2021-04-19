@@ -168,10 +168,10 @@
     border-radius: 12px;
     object-fit: cover;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4), -4px -4px 8px rgba($color: #231b50, $alpha: 0.25);
-
+    transition: all 0.6s ease-in-out;
+    
     &:hover {
       transform: scale(1.1);
-      transition: all 0.6s ease-in-out;
     }
   }
 
