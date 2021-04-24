@@ -121,7 +121,7 @@
 
     @keyframes greeting {
       0% {
-        font-size: 4rem;
+        font-size: 2rem;
       }
       100% {
         font-size: 1.3rem;
@@ -131,11 +131,15 @@
 
 
     .dynamic {
-      font-size: 3.5rem;
+      font-size: 4rem;
       text-shadow: 0 0 1px #DE3163;
       color: #DE3163;
       position: relative;
       min-width: 500px;
+
+      @media screen and (max-width: 1280px){
+        font-size: 3rem;
+      }
 
       &::after {
         position: absolute;

@@ -50,7 +50,22 @@ const IndexPage = () => {
       <section className="summary center">
         <div className="background-gradiant"></div>
         <div className="board">
-          <div className="text"></div>
+          <div className="text first">
+            <span className="hello">Hello, </span> 
+            <span className="para">
+              I'm a lead software engineer at practo technologies pvt. ltd. I mostly work on tech related to javascript like node, react, Gatsby etc. I have been working on javascript since 5 years now so have seen its evolution from vanilla jQuery to advanced react and node with various build tools deployed to get it working.
+            </span>
+          </div>
+          
+          <div className="text second">
+            <div className="para">
+
+              After graduating from IIT Jodhpur in computer science and engineering understanding foundational software concepts I started my career as a backend engineer working on PHP. Later switched to frontend tech.
+            </div>
+            <div className="para">
+            I like tech gadgets so reading and exploring them has become my hobby. I badly play table tennis, like following cricket and watch marvel movies. 
+            </div>
+          </div>
         </div>
       </section>
     </div>
