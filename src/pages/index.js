@@ -2,6 +2,10 @@ import * as React from "react"
 import wave from "../images/wave.jpg";
 import photo from "../images/keshav.webp";
 
+import firstPhoto from "../images/1.jpeg";
+import secondPhoto from "../images/2.jpeg";
+import thirdPhoto from "../images/3.jpeg";
+
 import "../styles/main.scss";
 
 import DynamicText from "../components/DynamicText";
@@ -50,7 +54,7 @@ const IndexPage = () => {
       <section className="summary center">
         <div className="background-gradiant"></div>
         <div className="board">
-          <div className="text first">
+          {/* <div className="text first">
             <span className="hello">Hello, </span> 
             <span className="para">
               I'm a lead software engineer at practo technologies pvt. ltd. I mostly work on tech related to javascript like node, react, Gatsby etc. I have been working on javascript since 5 years now so have seen its evolution from vanilla jQuery to advanced react and node with various build tools deployed to get it working.
@@ -65,6 +69,33 @@ const IndexPage = () => {
             <div className="para">
             I like tech gadgets so reading and exploring them has become my hobby. I badly play table tennis, like following cricket and watch marvel movies. 
             </div>
+          </div> */}
+          <div className="text1 stack-container">
+            <img src={firstPhoto} className="photo first"></img>
+            <img src={secondPhoto} className="photo second"></img>
+            <img src={thirdPhoto} className="photo third"></img>
+          </div>
+          <div className="text1">
+            <div className="pure-u-2-5"></div>
+            <div className="pure-u-3-5 center">
+              <div className="padding-20 padding-right-70">
+              <span className="hello">Hello, </span> 
+              <span className="para">
+                I'm Keshav, a lead software engineer at Practo. 
+                <div className="margin-top-8">
+
+                  I mostly work on tech related to javascript like node, react, Gatsby etc. and have been working on frontend technologies since 5 years.
+                </div>
+                <div className="margin-top-8">
+                  Graduated from IIT Jodhpur with Computer Science and Technologies stream. After which i started my career as backend developer working on PHP.
+                </div>
+                <div className="margin-top-8">
+                I like tech gadgets so reading and exploring them has become my hobby. I badly play table tennis, like following cricket and watch marvel movies.
+                </div>
+              </span>
+              </div>
+            </div>
+           
           </div>
         </div>
       </section>

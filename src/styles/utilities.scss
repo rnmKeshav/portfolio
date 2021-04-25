@@ -4,3 +4,18 @@
   align-items: center;
   justify-content: center;
 }
+
+.padding {
+
+  &-20 {
+    padding: 20px;
+  }
+
+  &-right-70 {
+    padding-right: 70px;
+  }
+}
+
+.margin-top-8 {
+  margin-top: 8px;
+}
