@@ -13,6 +13,8 @@ import momPhoto from "../images/mom.jpeg"
 import "../styles/main.scss";
 
 import DynamicText from "../components/DynamicText";
+import DesignationCard from "../components/DesignationCard";
+import ProjectCard from "../components/ProjectCard";
 
 const IndexPage = () => {
   return (
@@ -89,10 +91,69 @@ const IndexPage = () => {
       </section>
       <section className="experience center">
         <div className="background-gradiant"></div>
-        <div className="board">
-          <div className="designation-wrapper">Hello</div>
-          <div className="project-wrapper"></div>
-        </div>
+
+          <div className="designation-wrapper">
+            <DesignationCard 
+              designation="Software Engineer"
+              company="Fuziosparc Pvt. Ltd, Bangalore"
+              time="August 2014 - August 2015"
+              description="It was an early stage digital marketing startup. Developed a complete product from scratch using PHP, MySQL, JavaScript etc."
+            />
+            <DesignationCard 
+              designation="Software Engineer"
+              company="Practo Technologies, Bangalore"
+              time="Aug 2015 – Sept 2017"
+              description="Was responsible for internal tools used by sales team. Worked on backend technologies like PHP, MySQL
+              initially and then switched to JavaScript full time."
+            />
+            <DesignationCard 
+              designation="Senior Software Engineer"
+              company="Practo Technologies, Bangalore"
+              time="Oct 2017 – Dec 2020"
+              description="I took care of frontend products like homepage, search/listing, public profiles, appointment booking, provider
+              profiles, BFF layer along with aggregator layer service. Was involved in designing, developing and
+              performance evaluation of complete product."
+            />
+            
+            <DesignationCard 
+              designation="Core Web Vitals Improvement"
+              company="Practo Technologies, Bangalore"
+              time="Jan 2021 – Present"
+              description="I am responsible for the end to end consumer facing Practo’s UI and middle layer products. Actively involved
+              in product roadmap contribution, engineering design and solutioning. Leading and guiding marketplace-ui-ux
+              engineering team."
+            />
+          </div>
+          <div className="project-wrapper">
+            <div className="card-list">
+            <ProjectCard 
+              title="Provider onboarding flow"
+              description="A product to cater demands of different types of providers from their signup, profile details,
+              multi doctor, multi clinic and its various attribute capturing for taking user live on practo.com"
+              skills={["Application design", "React", "Redux", "SASS"]}
+            />
+            <ProjectCard 
+              title="Listing performance and design improvement"
+              description="Aim was to improve overall look and feel of the product with better UX and scalable design.
+              Devised an optimised listing architecture for scalable and performant design."
+              skills={["Frontend architecture", "React", "Engineering Design", "JavaScript"]}
+            />
+            <ProjectCard 
+              title="Online Consult Flow"
+              description="Developed a user flow starting at doctor listing and profiles with available / unavailable slots,
+              payment details to book a video consult appointment for marketplace doctors"
+              skills={["Javascript", "React", "Fluxible", "Express", "Routing"]}
+            />
+            
+            <ProjectCard 
+              title="Core Web Vitals Improvement"
+              description="Improvement in LCP, CLS for all marketplace products which includes Practo’s
+              doctor/clinic/hospital search, profile and all other transaction pages."
+              skills={["Node", "Express", "Webpack", "Loadable Components", "Redux"]}
+            />
+            </div>
+          
+          </div>
       </section>
       <section className="family center">
         <div className="background-gradiant"></div>

@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 const TEXT_BLOCK = ["Keshav Kumar", "Software Engineer", "Javascript Developer", "Keshav Kumar"];
 const animation_iterations = 1;
