@@ -1,6 +1,6 @@
 import * as React from "react"
-import wave from "../images/wave.jpg";
-import photo from "../images/keshav.webp";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import photo from "../images/keshav.jpeg";
 
 import firstPhoto from "../images/1.jpeg";
 import secondPhoto from "../images/2.jpeg";
@@ -8,7 +8,7 @@ import thirdPhoto from "../images/3.jpeg";
 import hemaPhoto from "../images/hema.jpeg";
 import gudduPhoto from "../images/guddu.jpeg";
 import papaPhoto from "../images/papa.jpeg";
-import momPhoto from "../images/mom.jpeg"
+import momPhoto from "../images/mom.jpeg";
 import contactKeshavPhoto from "../images/contact_keshav.jpeg";
 
 import "../styles/main.scss";
@@ -53,8 +53,12 @@ const IndexPage = () => {
             </div>
           </div>
           <div className="pure-u-2-5 center">
-
-            <img src={photo} className="photo"></img>
+            <LazyLoadImage
+              alt="Keshav Kumar, @rnmkeshav photo"
+              src={photo}
+              className="photo"
+            />
+            {/* <img src={photo} className="photo"></img> */}
           </div>
         </div>
       </section>
@@ -62,9 +66,18 @@ const IndexPage = () => {
         <div className="background-gradiant"></div>
         <div className="board">
           <div className="text1 stack-container">
-            <img src={firstPhoto} alt="Keshav Kumar @rnmKeshav" className="photo first"></img>
+            <LazyLoadImage 
+              src={firstPhoto} alt="Keshav Kumar @rnmKeshav" className="photo first"
+            />
+            <LazyLoadImage 
+              src={secondPhoto} className="photo second" alt="Keshav Kumar"
+            />
+            <LazyLoadImage 
+              src={thirdPhoto} className="photo third" alt="Keshav Kumar"
+            />
+            {/* <img src={firstPhoto} alt="Keshav Kumar @rnmKeshav" className="photo first"></img>
             <img src={secondPhoto} className="photo second" alt="Keshav Kumar"></img>
-            <img src={thirdPhoto} className="photo third" alt="Keshav Kumar"></img>
+            <img src={thirdPhoto} className="photo third" alt="Keshav Kumar"></img> */}
           </div>
           <div className="text1">
             <div className="pure-u-2-5"></div>
@@ -159,26 +172,38 @@ const IndexPage = () => {
       <section className="family center">
         <div className="background-gradiant"></div>
         <div className="image-wrapper">
-          <img src={papaPhoto} className="photo" alt="Ramnaresh Mandal, Father"></img>
+          <LazyLoadImage 
+            src={papaPhoto} className="photo" alt="Ramnaresh Mandal, Father"
+          />
+          {/* <img src={papaPhoto} className="photo" alt="Ramnaresh Mandal, Father"></img> */}
           <div className="details">
             Father
           </div>
         </div>
         <div className="image-wrapper">
-          <img src={momPhoto} className="photo" alt="Chandramin Kumari, Mom"></img>
+          <LazyLoadImage
+            src={momPhoto} className="photo" alt="Chandramin Kumari, Mom"
+          />
+          {/* <img src={momPhoto} className="photo" alt="Chandramin Kumari, Mom"></img> */}
           <div className="details">
             Mom
           </div>
         </div>
         <div className="image-wrapper">
-          <img src={gudduPhoto} className="photo guddu" alt="Alok Raj, Brother"></img>
+          <LazyLoadImage 
+            src={gudduPhoto} className="photo guddu" alt="Alok Raj, Brother"
+          />
+          {/* <img src={gudduPhoto} className="photo guddu" alt="Alok Raj, Brother"></img> */}
           <div className="details">
             Brother
           </div>
         </div>
         <div className="image-wrapper">
           {/* <span className="photo hema"></span> */}
-          <img src={hemaPhoto} className="photo hema" alt="Mahi Shree, Sister"></img>
+          <LazyLoadImage 
+            src={hemaPhoto} className="photo hema" alt="Mahi Shree, Sister"
+          />
+          {/* <img src={hemaPhoto} className="photo hema" alt="Mahi Shree, Sister"></img> */}
           <div className="details">
             Sister
           </div>
@@ -188,7 +213,10 @@ const IndexPage = () => {
         <div className="background-gradiant"></div>
         <div className="content">
           <div className="pure-u-1-2 u-t-align">
-            <img src={contactKeshavPhoto} className="photo" alt="Keshav Kumar, @rnmkeshav Contact"></img>
+            <LazyLoadImage 
+              src={contactKeshavPhoto} className="photo" alt="Keshav Kumar, @rnmkeshav Contact"
+            />
+            {/* <img src={contactKeshavPhoto} className="photo" alt="Keshav Kumar, @rnmkeshav Contact"></img> */}
           </div>
           <div className="pure-u-1-2">
             <div className="connect">
