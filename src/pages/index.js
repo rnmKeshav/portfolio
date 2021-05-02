@@ -9,6 +9,7 @@ import hemaPhoto from "../images/hema.jpeg";
 import gudduPhoto from "../images/guddu.jpeg";
 import papaPhoto from "../images/papa.jpeg";
 import momPhoto from "../images/mom.jpeg"
+import contactKeshavPhoto from "../images/contact_keshav.jpeg";
 
 import "../styles/main.scss";
 
@@ -61,7 +62,7 @@ const IndexPage = () => {
         <div className="background-gradiant"></div>
         <div className="board">
           <div className="text1 stack-container">
-            <img src={firstPhoto} alt="Keshav Kumar" className="photo first"></img>
+            <img src={firstPhoto} alt="Keshav Kumar @rnmKeshav" className="photo first"></img>
             <img src={secondPhoto} className="photo second" alt="Keshav Kumar"></img>
             <img src={thirdPhoto} className="photo third" alt="Keshav Kumar"></img>
           </div>
@@ -182,6 +183,33 @@ const IndexPage = () => {
             Sister
           </div>
         </div>
+      </section>
+      <section className="contact center">
+        <div className="background-gradiant"></div>
+        <div className="content">
+          <div className="pure-u-1-2 u-t-align">
+            <img src={contactKeshavPhoto} className="photo" alt="Keshav Kumar, @rnmkeshav Contact"></img>
+          </div>
+          <div className="pure-u-1-2">
+            <div className="connect">
+              <h5 className="header">Let's Connect</h5>
+              <div className="stay">
+                I stay in Arekere, Bangalore.
+                <div>
+                  We can always get in touch at Practo Technologies, Bannerghatta road office or <code>@rnmKeshav</code> online.
+                </div>
+              </div>
+              
+              <div className="email">rnmKeshav@gmail.com</div>
+              <div className="cta">
+                <a  href = "mailto: rnmkeshav@gmail.com" type="button" className="button">Click To Email</a>
+                <a  href="tel:+919008001555" type="button" className="button">Click To Call</a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
       </section>
     </div>
   )
