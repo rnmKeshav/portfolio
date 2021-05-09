@@ -130,7 +130,7 @@ const IndexPage = () => {
             />
             
             <DesignationCard 
-              designation="Core Web Vitals Improvement"
+              designation="Lead Software Engineer"
               company="Practo Technologies, Bangalore"
               time="Jan 2021 – Present"
               description="I am responsible for the end to end consumer facing Practo’s UI and middle layer products. Actively involved

@@ -1,3 +1,65 @@
 .hero {
-  background-color: var(--background-color);
+  padding: 18px;
+  @media screen and (max-width: 750px) {
+    padding: 12px;
+  }
+  .card {
+    width: 100%;
+    height: 550px;
+    box-shadow: 0px 0px 12px rgba($color: #000000, $alpha: 0.4);
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #231b50;
+
+    @media screen and (min-width: 750px) and (max-width: 1000px) {
+      height: 650px;
+      border-radius: 20px;
+    }
+
+    @media screen and (min-width: 1000px) {
+      height: 750px;
+      border-radius: 20px;
+    }
+
+
+    .photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      &-container {
+        width: 100%;
+        height: 80%;
+      }
+    }
+
+    .display-text {
+      color: white;
+      height: 20%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 12px;
+
+      @media (min-width: 750px) {
+        padding: 18px;
+      }
+
+      .dynamic {
+        font-size: 40px;
+        color: #DE3163;
+
+        @media (max-width: 370px) {
+          font-size: 32px;
+        }
+        @media (min-width: 371px) and (max-width: 399px) {
+          font-size: 35px;
+        }
+
+        @media (min-width: 400px) and (max-width: 420px) {
+          font-size: 38px;
+        }
+      }
+    }
+  }
 }
