@@ -8,11 +8,15 @@ body {
  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
-@import "./fontello-b9fe90f8/css/fontello.css";
-@import "./pure.scss";
-@import "./utilities.scss";
-@import "./heroSection.scss";
-@import "./summary.scss";
-@import "./experience.scss";
-@import "./family.scss";
-@import "./contact.scss";
+
+
+:root {
+  --background-color: #f0fff0;
+}
+
+
+.mweb {
+  width: 100%;
+  height: 100%;
+  @import "./heroSection.scss";
+}

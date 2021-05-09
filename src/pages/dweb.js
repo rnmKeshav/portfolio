@@ -11,7 +11,7 @@ import papaPhoto from "../images/papa.jpeg";
 import momPhoto from "../images/mom.jpeg";
 import contactKeshavPhoto from "../images/contact_keshav.jpeg";
 
-// import "../styles/main.scss";
+import "../styles/dweb/main.scss";
 
 import DynamicText from "../components/DynamicText";
 import DesignationCard from "../components/DesignationCard";
@@ -19,7 +19,7 @@ import ProjectCard from "../components/ProjectCard";
 
 const IndexPage = () => {
   return (
-    <div>
+    <div className="dweb">
       <section className="hero">
         <div className="background-gradiant"></div>
         <div className="content">
