@@ -54,7 +54,7 @@ const Mweb = () => {
       </section>
       <section className="experience">
         <div className="designation-wrapper">
-          <div className="card-list">
+          {/* <div className="card-list"> */}
             <DesignationCard 
               designation="Lead Software Engineer"
               company="Practo Technologies, Bangalore"
@@ -85,22 +85,16 @@ const Mweb = () => {
               description="It was an early stage digital marketing startup. Developed a complete product from scratch using PHP, MySQL, JavaScript etc."
             />          
          
-          </div>
+          {/* </div> */}
           
         </div>
         <div className="project-wrapper">
             {/* <div className="card-list"> */}
             <ProjectCard 
-              title="Provider onboarding flow"
-              description="A product to cater demands of different types of providers from their signup, profile details,
-              multi doctor, multi clinic and its various attribute capturing for taking user live on practo.com"
-              skills={["Application design", "React", "Redux", "SASS"]}
-            />
-            <ProjectCard 
-              title="Listing performance and design improvement"
-              description="Aim was to improve overall look and feel of the product with better UX and scalable design.
-              Devised an optimised listing architecture for scalable and performant design."
-              skills={["Frontend architecture", "React", "Engineering Design", "JavaScript"]}
+              title="Core Web Vitals Improvement"
+              description="Improvement in LCP, CLS for all marketplace products which includes Practo’s
+              doctor/clinic/hospital search, profile and all other transaction pages."
+              skills={["Node", "Express", "Webpack", "Loadable Components", "Redux"]}
             />
             <ProjectCard 
               title="Online Consult Flow"
@@ -108,12 +102,17 @@ const Mweb = () => {
               payment details to book a video consult appointment for marketplace doctors"
               skills={["Javascript", "React", "Fluxible", "Express", "Routing"]}
             />
-            
             <ProjectCard 
-              title="Core Web Vitals Improvement"
-              description="Improvement in LCP, CLS for all marketplace products which includes Practo’s
-              doctor/clinic/hospital search, profile and all other transaction pages."
-              skills={["Node", "Express", "Webpack", "Loadable Components", "Redux"]}
+              title="Listing design and performance improvement"
+              description="Aim was to improve overall look and feel of the product with better UX and scalable design.
+              Devised an optimised listing architecture for scalable and performant design."
+              skills={["Frontend architecture", "React", "Engineering Design", "JavaScript"]}
+            />
+            <ProjectCard 
+              title="Provider onboarding flow"
+              description="A product to cater demands of different types of providers from their signup, profile details,
+              multi doctor, multi clinic and its various attribute capturing for taking user live on practo.com"
+              skills={["Application design", "React", "Redux", "SASS"]}
             />
             {/* </div> */}
           

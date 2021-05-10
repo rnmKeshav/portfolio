@@ -1,65 +1,85 @@
 .experience {
   margin: 18px 0px;
 
-  .designation-wrapper {
-    // 
-    background-color: #0b0b4a;
-    display: flex;
+  .designation-wrapper,.project-wrapper {
+    @extend .horizontal-scroll;
+    background-color: #222250;
     padding: 48px 20px;
 
     @media screen and (max-width: 750px) {
       padding: 36px 12px;
     }
+  }
 
-    .card {
-      width: 320px;
-      height: 400px;
-      padding: 16px;
-      //border: 1px solid;
-      display: inline-block;
-      border-radius: 18px;
-      box-shadow: 4px 4px 8px rgba(0, 0,0, 0.25), -4px -4px 8px rgba(255, 255, 255, 0.05);
-      color: aliceblue;  
-      box-sizing: border-box; 
+  .project-wrapper {
+    background-color: #004e2a;
+  }
+
+  .card {
+    width: 320px;
+    height: 400px;
+    padding: 16px;
+    //border: 1px solid;
+    display: inline-block;
+    border-radius: 18px;
+    box-shadow: 4px 4px 8px rgba(0, 0,0, 0.30), -4px -4px 8px rgba(255, 255, 255, 0.10);
+    color: aliceblue;  
+    box-sizing: border-box; 
+    white-space: break-spaces;
+    vertical-align: top;
+
+    &+.card {
+      margin-left: 18px;
+      @media screen and (min-width: 800px) {
+        
+        margin-left: 30px;
+      }
+    }
+
+    .content {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      white-space: break-spaces;
-      flex: 0 0 auto;
+      height: 100%;
+      width: 100%;
+    }
 
-      &+.card {
-        margin-left: 18px;
-        @media screen and (min-width: 800px) {
-          
-          margin-left: 30px;
-        }
-      }
+    .designation,.title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
 
-      &-list {
-        @extend .horizontal-scroll;
-        display: flex;
-      }
+    .company {
+      font-size: 20px;
+      color: cyan;
+      margin-bottom: 4px;
+    }
 
-      .designation,.title {
-        font-size: 32px;
-        font-weight: 700;
-        margin-bottom: 4px;
-      }
-  
-      .company {
-        font-size: 20px;
-        color: cyan;
-        margin-bottom: 4px;
-      }
-  
-      .time {
-        color: lightgray;
-        margin-bottom: 8px;
-      }
-  
-      .description {
-        letter-spacing: 0.5px;
-      }
+    .time {
+      color: lightgray;
+      margin-bottom: 8px;
+    }
+
+    .description {
+      letter-spacing: 0.5px;
+    }
+  }
+
+  .skill-list {
+    margin: 12px 0px;
+    .skill {
+      display: inline-block;
+      padding: 10px;
+      border: 1px solid #0c5a35;
+      border-radius: 8px;
+      box-shadow: 4px 4px 8px rgb(0 0 0 / 50%), -2px -2px 6px rgb(255 255 255 / 20%);;
+      color: turquoise;
+      margin-top: 10px;
+      margin-right: 10px;
+      // &+.skill {
+      //   margin-left: 10px;
+      // }
     }
   }
 }

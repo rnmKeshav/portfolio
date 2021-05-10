@@ -23,9 +23,11 @@ const ProjectCard = (props) => {
 
   return (
     <div className="card">
-      <div className="title">{title}</div>
-      <div className="description">{description}</div>
-      <Skills skills={skills} />
+      <div className="content">
+        <div className="title">{title}</div>
+        <div className="description">{description}</div>
+        <Skills skills={skills} />
+      </div>
     </div>
   );
 }

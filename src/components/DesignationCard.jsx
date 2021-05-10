@@ -5,12 +5,15 @@ const DesignationCard = (props) => {
 
   return (
     <div className="card">
-      <div className="designation">{designation}</div>
-      <div className="company">{company}</div>
-      <div className="time">{time}</div>
-      <div className="description">
-        {description}
+      <div className="content">
+        <div className="designation">{designation}</div>
+        <div className="company">{company}</div>
+        <div className="time">{time}</div>
+        <div className="description">
+          {description}
+        </div>
       </div>
+      
     </div>
   );
 }
