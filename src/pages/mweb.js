@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useRef} from "react"
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import "../styles/mweb/main.scss";
@@ -14,7 +14,21 @@ import thirdPhoto from "../images/1_cropped.jpeg";
 import secondPhoto from "../images/2_cropped.jpeg";
 import firstPhoto from "../images/3_cropped.jpeg";
 
+import hemaPhoto from "../images/hema.jpeg";
+import gudduPhoto from "../images/guddu.jpeg";
+import papaPhoto from "../images/papa.jpeg";
+import momPhoto from "../images/mom.jpeg";
+
 const Mweb = () => {
+  const scroll_button = useRef(null);
+
+  const handleScroll = (ev) => {
+    let scroll_width = ev.target.scrollWidth;
+    let scroll_position = ev.target.scrollLeft;
+    let scroll_percent = parseInt((scroll_position/scroll_width)*100)+1;
+    scroll_button.current.style.left = `${scroll_percent}%`
+  }
+  
   return (
     <div className="mweb">
       <section className="hero">
@@ -116,6 +130,52 @@ const Mweb = () => {
             />
             {/* </div> */}
           
+        </div>
+      </section>
+      <section className="family" >
+        <div className="horizontal-scroll" onScroll={handleScroll}>
+          <div className="image-wrapper">
+            <LazyLoadImage 
+              src={papaPhoto} className="photo" alt="Ramnaresh Mandal, Father"
+            />
+            {/* <img src={papaPhoto} className="photo" alt="Ramnaresh Mandal, Father"></img> */}
+            <div className="details">
+              Father
+            </div>
+          </div>
+          <div className="image-wrapper">
+            <LazyLoadImage
+              src={momPhoto} className="photo" alt="Chandramin Kumari, Mom"
+            />
+            {/* <img src={momPhoto} className="photo" alt="Chandramin Kumari, Mom"></img> */}
+            <div className="details">
+              Mom
+            </div>
+          </div>
+          <div className="image-wrapper">
+            <LazyLoadImage 
+              src={gudduPhoto} className="photo guddu" alt="Alok Raj, Brother"
+            />
+            {/* <img src={gudduPhoto} className="photo guddu" alt="Alok Raj, Brother"></img> */}
+            <div className="details">
+              Brother
+            </div>
+          </div>
+          <div className="image-wrapper">
+            {/* <span className="photo hema"></span> */}
+            <LazyLoadImage 
+              src={hemaPhoto} className="photo hema" alt="Mahi Shree, Sister"
+            />
+            {/* <img src={hemaPhoto} className="photo hema" alt="Mahi Shree, Sister"></img> */}
+            <div className="details">
+              Sister
+            </div>
+          </div>
+        </div>
+        <div className="u-t-align">
+          <div className="scrollbar">
+            <div className="button" ref={scroll_button}></div>
+          </div>
         </div>
       </section>
     </div>
