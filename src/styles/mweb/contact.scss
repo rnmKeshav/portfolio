@@ -1,0 +1,94 @@
+.contact {
+  padding: 18px;
+  @media screen and (max-width: 750px) {
+    padding: 12px;
+  }
+  .card {
+    width: 100%;
+    //height: 550px;
+    box-shadow: 0px 0px 12px rgba($color: #000000, $alpha: 0.4);
+    border-radius: 16px 16px 0px 0px;
+    overflow: hidden;
+    background-color: #FFF;
+
+    @media screen and (min-width: 750px) and (max-width: 1000px) {
+      height: 650px;
+      border-radius: 20px;
+    }
+
+    @media screen and (min-width: 1000px) {
+      height: 750px;
+      border-radius: 20px;
+    }
+
+    .photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      &-container {
+        width: 100%;
+        height: 440px;
+      }
+    }
+  }
+  .display-text {
+    padding: 12px;
+
+    .stay {
+      margin-top: 8px;
+      color: #5f9ea0;
+  
+      span {
+        color: #30d030;
+        font-weight: 700;
+      }
+    }
+  
+    .touch {
+      margin-top: 12px;
+      color: #28328c;
+      font-weight: 700;
+
+      span {
+        color: #5f9ea0;
+        font-weight: 500;
+      }
+    }
+
+    .username {
+      margin: 8px 0px;
+      color: #5f9ea0;
+    }
+
+    .connect {
+      margin: 32px 0px 18px;
+      .button {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #fffaf0;
+        font-weight: 700;
+        display: inline-block;
+        box-sizing: border-box;
+        width: 95%;
+
+        &.email {
+          border: 2px solid #4ea94e;
+          border-radius: 3px;
+          color: #4ea94e;
+        }
+
+        &.call {
+          border: 2px solid #4ea94e;
+          border-radius: 3px;
+          background-color: #4ea94e;
+          color: #FFF;
+        } 
+      }
+    }
+  }
+
+  
+  
+}

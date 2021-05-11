@@ -3,6 +3,12 @@
   padding-top: 36px;
   padding-bottom: 36px;
 
+  .horizontal-scroll {
+    @media screen and (max-width: 750px) {
+      padding: 12px 12px;
+    }
+  }
+
 
   .image-wrapper {
     width: 330px;

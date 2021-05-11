@@ -19,6 +19,8 @@ import gudduPhoto from "../images/guddu.jpeg";
 import papaPhoto from "../images/papa.jpeg";
 import momPhoto from "../images/mom.jpeg";
 
+import contactKeshavPhoto from "../images/contact_keshav.jpeg";
+
 const Mweb = () => {
   const scroll_button = useRef(null);
 
@@ -137,6 +139,7 @@ const Mweb = () => {
           <div className="image-wrapper">
             <LazyLoadImage 
               src={papaPhoto} className="photo" alt="Ramnaresh Mandal, Father"
+              threshold={200}
             />
             {/* <img src={papaPhoto} className="photo" alt="Ramnaresh Mandal, Father"></img> */}
             <div className="details">
@@ -146,6 +149,7 @@ const Mweb = () => {
           <div className="image-wrapper">
             <LazyLoadImage
               src={momPhoto} className="photo" alt="Chandramin Kumari, Mom"
+              threshold={200}
             />
             {/* <img src={momPhoto} className="photo" alt="Chandramin Kumari, Mom"></img> */}
             <div className="details">
@@ -155,6 +159,7 @@ const Mweb = () => {
           <div className="image-wrapper">
             <LazyLoadImage 
               src={gudduPhoto} className="photo guddu" alt="Alok Raj, Brother"
+              threshold={200}
             />
             {/* <img src={gudduPhoto} className="photo guddu" alt="Alok Raj, Brother"></img> */}
             <div className="details">
@@ -165,6 +170,7 @@ const Mweb = () => {
             {/* <span className="photo hema"></span> */}
             <LazyLoadImage 
               src={hemaPhoto} className="photo hema" alt="Mahi Shree, Sister"
+              threshold={200}
             />
             {/* <img src={hemaPhoto} className="photo hema" alt="Mahi Shree, Sister"></img> */}
             <div className="details">
@@ -175,6 +181,32 @@ const Mweb = () => {
         <div className="u-t-align">
           <div className="scrollbar">
             <div className="button" ref={scroll_button}></div>
+          </div>
+        </div>
+      </section>
+      <section className="contact">
+        <div className="card">
+          <div className="photo-container">
+            <LazyLoadImage
+              alt="Keshav Kumar, @rnmkeshav photo"
+              src={contactKeshavPhoto}
+              className="photo"
+            />
+          </div>
+          <div className="display-text">
+            <div className="stay">
+              I stay in <span>Arekere, Bangalore</span>
+            </div>
+            <div className="touch">Practo Technologies, <span>Bannerghatta road</span></div>
+            <div className="username">@rnmKeshav</div>
+            <div className="connect">
+                <div className="pure-u-1-2">
+                  <a href="mailto: rnmkeshav@gmail.com" type="button" className="button email u-t-align">Click To Email</a>
+                </div>
+                <div className="pure-u-1-2 u-t-right">
+                  <a href="tel:+919008001555" type="button" className="button call u-t-align">Click To Call</a>
+                </div>
+            </div>
           </div>
         </div>
       </section>
