@@ -28,6 +28,13 @@
       &-container {
         width: 100%;
         height: 440px;
+
+        .lazy-load-image-background {
+          height: 100%;
+          width: 100%;
+          background-size: cover!important;
+          background-position: 50% 50%;
+        }
       }
     }
   }
