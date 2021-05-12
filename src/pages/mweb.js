@@ -1,5 +1,6 @@
 import React, {useRef} from "react"
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { Helmet } from "react-helmet"
 
 import "../styles/mweb/main.scss";
 
@@ -33,6 +34,15 @@ const Mweb = () => {
   
   return (
     <div className="mweb">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Keshav Kumar | Javascript Developer</title>
+        <meta name="description" content="Keshav Kumar is a Software Engineer works on Javascript and frontend tech. Graduated from IIT Jodhpur and currently working at Practo Technologoes" />
+        <meta name="keywords" content="Keshav Kumar, rnmKeshav, Practo, IIT Jodhpur, Javascript Developer, Sitamarhi" />
+        <meta name="author" content="Keshav Kumar" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <link rel="canonical" href="https://rnmkeshav.in/mweb" />
+      </Helmet>
       <section className="hero">
         <div className="card">
           <div className="photo-container">
