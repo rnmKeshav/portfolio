@@ -1,6 +1,7 @@
 import React, {useRef} from "react"
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Helmet } from "react-helmet"
+import schema from "../components/Schema";
 
 import "../styles/mweb/main.scss";
 
@@ -48,7 +49,11 @@ const Mweb = () => {
         <meta name="author" content="Keshav Kumar" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <link rel="canonical" href="https://rnmkeshav.in/mweb" />
+        <script type="application/ld+json">
+        {`${schema()}`}
+        </script>
       </Helmet>
+      
       <section className="hero">
         <div className="card">
           <div className="photo-container">

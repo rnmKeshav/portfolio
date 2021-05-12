@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import photo from "../images/keshav.jpeg";
 
+import schema from "../components/Schema";
+
 import firstPhoto from "../images/1.jpeg";
 import secondPhoto from "../images/2.jpeg";
 import thirdPhoto from "../images/3.jpeg";
@@ -29,7 +31,11 @@ const IndexPage = () => {
         <meta name="author" content="Keshav Kumar" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <link rel="canonical" href="https://rnmkeshav.in/mweb" />
+        <script type="application/ld+json">
+          {`${schema()}`}
+        </script>
       </Helmet>
+      
       <section className="hero">
         <div className="background-gradiant"></div>
         <div className="content">
