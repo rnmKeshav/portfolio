@@ -5,6 +5,7 @@
   --background-color: #efe8f3;
   --summary-card-background-color: #f5fffa;
 }
+@import "../fontello/css/fontello.css";
 
 body {
  margin: 0;
@@ -14,8 +15,6 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: var(--background-color);
 }
-
-
 
 .mweb {
   width: 100%;
